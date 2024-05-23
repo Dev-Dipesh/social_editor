@@ -1,0 +1,78 @@
+.app__container {
+  display: flex;
+  flex-direction: row;
+  padding-top: 20px;
+  padding-left: 20px;
+  column-gap: 20px;
+  /* background - 135 Slick Carbon - https://webgradients.com/ */
+  background: linear-gradient(to bottom, #323232 0%, #3f3f3f 40%, #1c1c1c 150%),
+    linear-gradient(
+      to top,
+      rgba(255, 255, 255, 0.4) 0%,
+      rgba(0, 0, 0, 0.25) 200%
+    );
+  background-blend-mode: multiply;
+  width: 100%;
+  height: calc(100% - 55px); // Subtract the height of the header
+}
+
+.flex-row,
+.flex-row-1,
+.flex-row-2 {
+  width: 250px;
+  display: flex;
+  column-gap: 10px;
+  border: 2px dotted #fff;
+  padding: 10px;
+}
+
+.flex-col {
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  border: 2px dotted #fff;
+  padding: 10px;
+}
+
+.box {
+  background: #54bf97;
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+  border: 1px solid #fff;
+  text-align: center;
+  line-height: 50px;
+}
+
+.flex-row-1 > .box:nth-child(3) {
+  background: #f7b801;
+  align-self: flex-end;
+  margin-left: auto;
+}
+
+.flex-row-2 > .box:nth-child(3) {
+  flex-grow: 3;
+  background: #f7b801;
+}
+
+.flex-col:first-child > .box:nth-child(3) {
+  background: #f7b801;
+  align-self: flex-end;
+  margin-top: auto;
+}
+
+.flex-col:last-child > .box:nth-child(2) {
+  flex-grow: 4;
+  background: #f7b801;
+}
+
+.language-html,
+.language-css {
+  height: 550px;
+  overflow-y: scroll;
+  border: 1px solid #2f2f2f;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}

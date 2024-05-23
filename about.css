@@ -1,0 +1,14 @@
+.app__container {
+  display: flex;
+  flex-direction: row;
+  padding-top: 20px;
+  padding-left: 20px;
+  column-gap: 20px;
+  background-image: linear-gradient(
+    -225deg,
+    #e3fdf5 0%,
+    #ffe6fa 100%
+  ); // Perfect white - https://webgradients.com/
+  width: 100%;
+  height: calc(100% - 55px); // Subtract the height of the header
+}

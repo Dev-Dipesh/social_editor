@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://bytegrad.com/course-assets/css/1/favicon.png"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/lato-font/3.0.0/css/lato-font.min.css"
+      integrity="sha512-rSWTr6dChYCbhpHaT1hg2tf4re2jUxBWTuZbujxKg96+T87KQJriMzBzW5aqcb8jmzBhhNSx4XYGA6/Y+ok1vQ=="
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+      crossorigin="anonymous"
+    />
+    <title>
+      Social Editor -- Simple editor to create and publish social media posts
+    </title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="flexbox.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css"
+      integrity="sha512-Jk4AqjWsdSzSWCSuQTfYRIF84Rq/eV0G2+tu07byYwHcbTGfdmLrHjUSwvzp5HvbiqK4ibmNwdcG49Y5RGYPTg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"
+      integrity="sha512-D9gUyxqja7hBtkWpPWGt9wfbfaMGVt9gnyCvYa+jojwwPHLCzUm5i8rpk7vD7wNee9bA35eYIjobYPaQuKS1MQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <!-- and it's easy to individually load additional languages -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/html.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/css.min.js"></script> -->
+
+    <script>
+      hljs.highlightAll();
+    </script>
+  </head>
+  <body class="app">
+    <header class="header">
+      <img
+        class="logo"
+        src="https://bytegrad.com/course-assets/css/1/logo.svg"
+        alt="Social Editor Logo"
+      />
+      <button class="dd-toggle" onclick="window.location.href='index.html'">
+        Home
+      </button>
+      <button
+        class="dd-toggle dd-toggle--active"
+        onclick="window.location.href='flexbox.html'"
+      >
+        Flexbox
+      </button>
+      <button class="dd-toggle" onclick="window.location.href='about.html'">
+        About
+      </button>
+
+      <button class="dd-toggle">
+        <i class="fas fa-crown dd-toggle__icon"></i>
+      </button>
+      <button class="dd-toggle">
+        <i class="fas fa-bell dd-toggle__icon"></i>
+      </button>
+      <button class="dd-toggle">
+        <img
+          class="dd-toggle__img"
+          src="https://images.unsplash.com/photo-1614247484197-9c6164bb532f?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&fit=crop&w=60&q=100"
+          alt="User photo"
+        />
+        <span class="dd-toggle__text">James O.</span>
+      </button>
+    </header>
+    <div class="app__container">
+      <div>
+        <div class="flex-row-1">
+          <div class="box">R</div>
+          <div class="box">R</div>
+          <div class="box">R</div>
+        </div>
+        <div class="flex-row-2">
+          <div class="box">R</div>
+          <div class="box">R</div>
+          <div class="box">R</div>
+        </div>
+        <div class="flex-row">
+          <div class="flex-col">
+            <div class="box">C</div>
+            <div class="box">C</div>
+            <div class="box">C</div>
+          </div>
+          <div class="flex-col">
+            <div class="box">C</div>
+            <div class="box">C</div>
+            <div class="box">C</div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h3>HTML</h3>
+        <!-- Display raw HTML code -->
+        <pre>
+        <code class="language-html">
+&lt;div class="flex-row-1"&gt;
+<br />
+&nbsp;&nbsp;&lt;div class="box"&gt;R&lt;/div&gt;
+<br />
+&nbsp;&nbsp;&lt;div class="box"&gt;R&lt;/div&gt;
+<br />
+&nbsp;&nbsp;&lt;div class="box"&gt;R&lt;/div&gt;
+<br />
+&lt;/div&gt;
+<br />
+&lt;div class="flex-row-2"&gt;
+<br />
+&nbsp;&nbsp;&lt;div class="box"&gt;R&lt;/div&gt;
+<br />
+&nbsp;&nbsp;&lt;div class="box"&gt;R&lt;/div&gt;
+<br />
+&nbsp;&nbsp;&lt;div class="box"&gt;R&lt;/div&gt;
+<br />
+&lt;/div&gt;
+<br />
+&lt;div class="flex-row"&gt;
+<br />
+&nbsp;&nbsp;&lt;div class="flex-col"&gt;
+<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="box"&gt;C&lt;/div&gt;
+<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="box"&gt;C&lt;/div&gt;
+<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="box"&gt;C&lt;/div&gt;
+<br />
+&nbsp;&nbsp;&lt;/div&gt;
+<br />
+&nbsp;&nbsp;&lt;div class="flex-col"&gt;
+<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="box"&gt;C&lt;/div&gt;
+<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="box"&gt;C&lt;/div&gt;
+<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="box"&gt;C&lt;/div&gt;
+<br />
+&nbsp;&nbsp;&lt;/div&gt;
+<br />
+&lt;/div&gt;
+        </code></pre>
+      </div>
+      <div>
+        <h3>CSS</h3>
+        <pre>
+        <code class="language-css">
+.flex-row,
+.flex-row-1,
+.flex-row-2 {
+  width: 250px;
+  display: flex;
+  column-gap: 10px;
+  border: 2px dotted #fff;
+  padding: 10px;
+}
+
+.flex-col {
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  border: 2px dotted #fff;
+  padding: 10px;
+}
+
+.box {
+  background: #54bf97;
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+  border: 1px solid #fff;
+  text-align: center;
+  line-height: 50px;
+}
+
+.flex-row-1 > .box:nth-child(3) {
+  background: #f7b801;
+  align-self: flex-end;
+  margin-left: auto;
+}
+
+.flex-row-2 > .box:nth-child(3) {
+  flex-grow: 3;
+  background: #f7b801;
+}
+
+.flex-col:first-child > .box:nth-child(3) {
+  background: #f7b801;
+  align-self: flex-end;
+  margin-top: auto;
+}
+
+.flex-col:last-child > .box:nth-child(2) {
+  flex-grow: 4;
+  background: #f7b801;
+}
+        </code></pre>
+      </div>
+    </div>
+  </body>
+</html>
